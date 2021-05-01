@@ -1,0 +1,33 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.MyApplication2" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_200</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_200</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+    <style name="Theme.NavigationViewBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryDark">@color/pink</item>
+        <item name="colorAccent">@color/white</item>
+        <item name="android:windowBackground">@color/whiteColor</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:typeface">sans</item>
+    </style>
+    <style name="ToolbarDesactivados" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="colorControlHighlight">@color/white</item>
+    </style>
+    <style name="AparienciaTextoTitulo" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/whiteColor</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:ellipsize">none</item>
+    </style>
+</resources>

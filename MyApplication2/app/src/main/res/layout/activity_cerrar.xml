@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="clickListener"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent" android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/loutCerrar"
+            android:background="@color/black">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/logo"
+                android:paddingLeft="10dp"
+                android:paddingRight="20dp"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@drawable/fondo_usuario"
+                android:layout_gravity="center_vertical"
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/poweroff_ico"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="25dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:textColor="@color/white"
+                    android:text="Cerrar Sesión"
+                    android:gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_below="@+id/loutCerrar">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rec_menu_claro"
+                android:layout_marginTop="40dp"
+                android:gravity="center_vertical"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/noticias_ic"
+                    android:layout_weight="2.5"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="Noticias (no hace nada)"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:layout_marginEnd="30dp"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rec_menu_fuerte"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/checkin_ic"
+                    android:layout_weight="2.5"
+                    />
+
+                <TextView
+                    android:id="@+id/btnCheckin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="Firma"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:layout_marginEnd="30dp"
+                    android:onClick="@{(v) -> clickListener.onClick(v)}"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rec_menu_claro"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/notification_ic"
+                    android:layout_weight="2.5"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="Notis (tampoco hace nada ^^)"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:layout_marginEnd="30dp"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rec_menu_fuerte"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/usuario_icm"
+                    android:layout_weight="2.5"
+                    />
+
+                <TextView
+                    android:id="@+id/btnPerfil"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="Select or Capture Image"
+                    android:onClick="@{(v) -> clickListener.onClick(v)}"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:layout_marginEnd="30dp"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rec_menu_claro"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/task_ic"
+                    android:layout_weight="2.5"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="Perritos"
+                    android:onClick="@{(v) -> clickListener.onClick(v)}"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:layout_marginEnd="30dp"
+                    android:id="@+id/btnTareas"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

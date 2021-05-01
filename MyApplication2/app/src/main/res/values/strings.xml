@@ -1,0 +1,26 @@
+<resources>
+    <string name="btn1">Aceptar</string>
+    <string name="bienvenido">Bienvenido</string>
+    <string name="por_favor">Por favor complete todos los detalles</string>
+    <string name="olvide">Olvidé contraseña</string>
+    <string name="btnInicio">Inicio</string>
+    <string name="btnRegistrar">Registrar</string>
+    <string name="titRegistro">Registro</string>
+    <string name="btnRecuperar">Recuperar</string>
+
+    <string name="app_name">MiApp Said</string>
+    <string name="emptyMessage">No puede estar vacio</string>
+    <string name="badEmail">Debe usar un correo valido</string>
+    <string name="dateErrorMessage">Fecha Invalida</string>
+    <string name="regexErrorMessage">Debe escribir un nombre valido</string>
+
+    <string name="hint_pass">Contraseña</string>
+    <string name="hint_confirm">Confirmar contraseña</string>
+    <string name="btn_acep">Aceptar</string>
+
+    <string name="name">Nombre del empleado</string>
+    <string name="limpia">Limpiar firma</string>
+    <string name="guarda">Guardar Firma</string>
+
+    <string name="btn_dalert">Ver Alert</string>
+</resources>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="clickListener"
+            type="android.view.View.OnClickListener" />
+    </data>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent" android:layout_height="match_parent"
+        android:background="@drawable/fondo_login"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logo"
+            android:paddingLeft="30dp"
+            android:paddingTop="20dp"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/bienvenido"
+                android:textColor="@color/white"
+                android:textSize="40dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/por_favor"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/fondo_usuario"
+                android:layout_marginTop="30dp"
+                android:drawableLeft="@drawable/usuario_solid"
+                android:paddingLeft="20dp"
+                android:textColor="@color/white"
+                android:hint="Usuario"
+                android:textColorHint="@color/white"
+                android:drawablePadding="10dp"
+                app:validateMinLength="@{4}"
+                app:validateMaxLength="@{10}"
+                validateEmpty="@{true}"
+                app:validateEmptyMessage="@{@string/emptyMessage}"
+                />
+
+
+            <!--<EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/fondo_usuario"
+                android:layout_marginTop="5dp"
+                android:drawableRight="@drawable/usuario_solid"
+                android:paddingRight="20dp"
+                android:textColor="@color/white"
+                android:paddingLeft="30dp"
+                android:hint="Contraseña"
+                android:textColorHint="@color/white"
+                android:drawablePadding="10dp"
+                app:validateMinLength="@{4}"
+                app:validateMaxLength="@{10}"
+                validateEmpty="@{true}"
+                app:validateEmptyMessage="@{@string/emptyMessage}"
+                />-->
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/filledTextField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_pass"
+                android:textColorHint="@color/white"
+                android:drawablePadding="10dp"
+                app:endIconMode="password_toggle"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginTop="40dp"
+                app:expandedHintEnabled="false"
+                app:hintTextColor="@color/white"
+                android:layout_centerInParent="true"
+                app:endIconTint="@color/white"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:background="@drawable/edit_text_white"
+                    android:inputType="textPassword"
+                    app:validateMinLength="@{4}"
+                    app:validateMaxLength="@{10}"
+                    validateEmpty="@{true}"
+                    app:validateEmptyMessage="@{@string/emptyMessage}"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/olvide"
+                android:textColor="@color/white"
+                android:textSize="15dp"
+                android:layout_marginTop="30dp"
+                android:layout_gravity="end"
+                />
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_height="1dp"
+            android:layout_width="1dp"
+            android:id="@+id/btnDialog"
+            android:text="@string/btn_dalert"
+            android:layout_above="@id/btnEva"
+            android:layout_centerHorizontal="true"
+            android:onClick="@{(v) -> clickListener.onClick(v)}"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            style="@style/btnSaid"
+            android:id="@+id/btnEva"
+            android:onClick="@{(v) -> clickListener.onClick(v)}"
+            android:layout_height="wrap_content"
+            android:text="@string/btnInicio"
+            android:layout_centerInParent="true"
+            android:layout_above="@+id/txtBack"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btnRegistrar"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_centerInParent="true"
+            android:id="@+id/txtBack"
+            android:paddingBottom="20dp"
+            android:layout_alignParentBottom="true"
+            />
+
+    </RelativeLayout>
+</layout>

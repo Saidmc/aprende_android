@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="titulo"
+            type="String" />
+        <variable
+            name="texto"
+            type="String" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_marginTop="24dp"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/fondo_login"
+            tools:ignore="ContentDescription" />
+
+
+        <TextView
+            android:id="@+id/tituloAlerta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginRight="24dp"
+            android:textColor="@color/blue"
+            android:textSize="20sp"
+            android:gravity="center"
+            tools:text="Titulo"/>
+
+
+
+        <TextView
+            android:id="@+id/mensajeAlerta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginBottom="24dp"
+            android:gravity="center"
+            android:text="@{texto}"
+            android:textColor="@color/white"
+            tools:text="Texto"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnDAcp"
+                android:layout_width="0dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginBottom="24dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:background="@drawable/button_blue"
+                android:text="Aceptar" />
+
+
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginBottom="24dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@color/blue"
+                android:textColor="@color/white"
+                android:text="Cancelar" />
+        </LinearLayout>
+    </LinearLayout>
+
+</layout>

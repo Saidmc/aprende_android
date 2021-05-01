@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="posicion"
+            type="int" />
+        <variable
+            name="clickListener"
+            type="android.view.View.OnClickListener" />
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:layout_margin="16dp"
+        android:elevation="7dp"
+        app:cardCornerRadius="8dp"
+        android:tag="@{posicion}">
+
+        <ImageView
+            android:id="@+id/ivDog"
+            android:scaleType="centerCrop"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:onClick="@{(v) -> clickListener.onClick(v)}"/>
+
+    </LinearLayout>
+</layout>
